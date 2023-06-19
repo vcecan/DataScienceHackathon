@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    
+    <script src = "/static/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js" integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const tl = gsap.timeline({ defaults: { duration: 0.5 }});
+
+        tl.from('.logo-content', { opacity: 0, y: 30, })
+        .from('.main-head__heading', { opacity: 0, y: 30 })
+        .from('.main-head__heading__description', { opacity: 0, y: 30 })
+        .from('.picture_gif', { opacity: 0, y: 30 })
+        .from('.nav-links', { opacity: 0, y:30 })
+        .from('.description-coffee-photo', { opacity: 0, y: 30, ease: "circ.out" })
+        .from('.description-heading__description', { opacity: 0, y: 30, ease: "bounce" })
+        .from('.description-heading', { opacity: 0, y: 30, ease: "sine.out" })
+        .from('.question-heading', { opacity: 0, y: 30, ease: "sine.out" })
+        .from('.question-photo', { opacity: 0, y: 30, ease: "sine.out" })
+        .from('.question-link', { opacity: 0, y: 30, ease: "ease.out" });
+
+        const secondTimeLine = gsap.timeline();
+
+        secondTimeLine.fromTo('.two', {x: '-100%', y: '+100%'}, {y: 0})
+
+        ScrollTrigger.create({
+            animation: secondTimeLine, 
+            site: '.site-container',
+            start: 'top top',
+            end: 'bottom',
+            scrub: true,
+            pin: true,
+        })
+
+    </script>
+
+    {% block body %}{% endblock %}
+</body>
+</html>

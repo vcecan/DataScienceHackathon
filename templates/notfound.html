@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404 Not Found</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    
+    <div class = "container">
+        <div class="notfound-heading">
+            <h2>Eror 404 Not Found</h2>
+            <div class = "home-button"><a href="http://127.0.0.1:5000/" style = "text-align:center;">Home</a></dv >
+        </div>
+    </div>  
+
+    <div class="notfound-container">
+        <div class="notfound-image">
+            <img src="/static/img/peep-24.png" alt="">
+        </div>
+        <div class="notfound-image">
+            <img src="/static/img/output-onlinepngtools (1).png" alt="">
+        </div>
+    </div>
+
+
+
+    {% block body %}{% endblock %}
+
+</body>
+</html>

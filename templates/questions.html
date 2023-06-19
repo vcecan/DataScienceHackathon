@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+    <div class="questions container">
+         <div class="nav">
+
+                    <div class = "logo-content" >
+                        <img class="logo_img" src="{{ url_for('static', filename='img/Coat_of_arms_of_Moldova.svg.png')}}">
+                       <a href = "http://127.0.0.1:5000/" class = "logo-name">
+                            <span>
+                              ExploreMoldova
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="nav-links">
+                        <a href="http://127.0.0.1:5000">home</a>
+                        <a href="/analyze">questions</a>
+                        <a href="/templates/maps.html">maps</a>
+                    </div>
+                </div>
+       <form action="/result", method="POST">
+        <div class="question-container">
+            <br> <br> <br>
+            <span class = "question-number">1.</span> 
+            <span class = "question-name">What country are you from ? *</span>
+            <input type="text" name="nationality" class = "question-input">
+            <br> <br>
+            
+             <br> <br>
+        </div>
+
+        <br> <br>
+
+        <div class="question-container">
+            <span class = "question-number">2.</span> 
+            <span class = "question-name">How old are you? *</span>
+            <select id="age" name="age" class = "question-input" required>
+                <option value="">Choose your age range</option>
+                <option value="5">18-25</option>
+                <option value="4">26-35</option>
+                <option value="3">36-45</option>
+                <option value="2">46-55</option>
+                <option value="1">56-67</option>
+                <option value="0">68+</option>
+
+            </select>
+            <br> <br>
+            <br> <br>
+            
+            <br> <br>
+        </div>
+        <div class="question-container">
+            <span class = "question-number">3.</span> 
+            <span class = "question-name">Why are you visiting Moldova? *</span>
+            <select id="why" name="why" class = "question-input" required>
+                <option value="">Choose answer</option>
+                <option value="2">Visting friends/family</option>
+                <option value="3">Turism/recreation</option>
+                <option value="1">Business purpouses</option>
+                <option value="0">Other reason</option>
+                
+            </select>
+            <br> <br>
+            <br> <br>
+            
+            <br> <br>
+            <div class="question-container">
+                <span class = "question-number">4.</span> 
+                <span class = "question-name">What were the areas of interest to visit Moldova? *</span>
+                <select id="interest" name="interest" class = "question-input" required>
+                    <option value="">Choose answer</option>
+                    <option value="0">Religion (pilgrimage, missionary travels etc.)</option>
+                    <option value="0">Visit the university</option>
+                    <option value="0">Charity</option>
+                    <option value="0">Sport - football game/rugby</option>
+                    <option value="0">Shopping</option>
+                    <option value="0">Documents</option>
+                    <option value="0">Transit</option>
+                    <option value="0">DK</option>
+                    <option value="0">Sport - football game/rugby</option>
+                    <option value="1">Business/profesional activity</option>
+                    <option value="1">Visiting relatives, friends</option>
+                    <option value="1">Leisure: Vacation, rest, recreation</option>
+                    <option value="1">Wine Festival (National Wine Day)</option>
+                    <option value="1">Festivals, celebrations, events</option>
+                    <option value="1">Culture</option>
+                    
+                    
+                </select>
+                <br> <br>
+                <br> <br>
+
+                <div class="question-container">
+                    <span class = "question-number">5.</span> 
+                    <span class = "question-name">What is your marital status? *</span>
+                    <select id="marital" name="marital" class = "question-input" required>
+                        <option value="">Choose answer</option>
+                        <option value="Married, with childern">Married, with childern</option>
+                        <option value="Married, without children">Married, without children</option>
+                        <option value="Single">Single</option>
+                        <option value="DK">Dont know</option>
+                        
+                        
+                    </select>
+                    
+        </div>
+                <br><br>
+        <button type="submit" class = "question-submit">Trimite</button>
+    </form>
+        <br><br>
+</div>
+
+
+
+
+    {% block body %}{% endblock %}
+</body>
+</html>

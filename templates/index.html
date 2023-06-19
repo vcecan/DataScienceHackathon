@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,700;1,900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
+                
+
+    <div class = "site-container">
+        <section class="main-section">
+            <div class="container">
+                <div class="nav">
+                  
+                    <div class = "logo-content" >
+                        <img class="logo_img" src="{{ url_for('static', filename='img/Coat_of_arms_of_Moldova.svg.png')}}">
+                       <a href = "http://127.0.0.1:5000/" class = "logo-name">
+                            <span>
+                              ExploreMoldova
+                            </span>
+                        </a>
+                    </div>
+        
+                    <div class="nav-links">
+                        <a href="http://127.0.0.1:5000">home</a>
+                        <a href="/analyze">questions</a>
+                        <a href="/templates/maps.html">maps</a>
+                    </div>
+                </div>
+               
+                <div class="main-section__content">
+                    <div class="main-head">
+                        <div class = "main-head__heading">
+                            <h1>Welcome, to <br> Moldova</h1>
+                        </div>
+                        <div class="main-head__heading__description">
+                            <span>we develop destinations</span>
+                        </div>
+                    </div>
+                    <div class="main-section__picture">
+                        <img class = "picture_gif"src="/static/img/sprinting.gif" alt="">
+                    </div>
+                </div>
+            </div>
+    
+        </section>
+    
+        <section class="description-section container">
+            <div class="description-photo">
+                <img class = "description-coffee-photo" src="/static/img/coffee.gif" alt="">
+            </div>
+            
+            <div class = "description-text">
+                <div class="description-heading">
+                    <h2>How we do this</h2>
+                </div>
+    
+                <div class="description-heading__description">
+                    We develop logistics real estate that connects nature, architecture, technology, and functionality.
+                </div>
+            </div>
+        </section>
+
+        <section class="question">
+            
+           <div class = "container">
+               <div class = "question-text">
+                    <div class="question-heading">
+                        <h2>Meet our main questions <br> for you</h2>
+                    </div>
+        
+                    <div class = "question-picture">
+                        <img class ="question-photo" src="/static/img/data.png" alt="">
+                    </div>
+               </div>
+    
+               <div class="question-link">
+                <a href="/analyze">Let's start</a>
+               </div>
+           </di >
+        </section>
+
+        <section class="footer container">
+            <div class="footer-description">
+                    <div class="footer-description__element">
+                      <a href = "/templates/notfound.html">About Us<a >
+                    </div>
+    
+                    <div class="footer-description__element">
+                        <a href = "#">With Us<a >
+                    </div>
+    
+                    <div class="footer-description__element">
+                        <a href = "#">Just Us<a >
+                    </div>
+            </div>
+        </section>
+    </div>
+        
+    
+
+{% endblock %}
+
+{% block body %} 
+
+{% endblock %}

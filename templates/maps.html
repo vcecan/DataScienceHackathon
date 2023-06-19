@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    {% block head %}{% endblock %}
+</head>
+    <style>
+        #map {
+ height: 360px;
+ width: 300px;
+ overflow: hidden;
+ float: left;
+ border: thin solid #333;
+ }
+#capture {
+ height: 360px;
+ width: 480px;
+ overflow: hidden;
+ float: left;
+ background-color: #ECECFB;
+ border: thin solid #333;
+ border-left: none;
+ }
+    </style>
+
+<body>
+
+    <div class="container">
+         <div class="nav">
+
+                    <div class = "logo-content" >
+                        <img class="logo_img" src="{{ url_for('static', filename='img/Coat_of_arms_of_Moldova.svg.png')}}">
+                       <a href = "http://127.0.0.1:5000/" class = "logo-name">
+                            <span>
+                              ExploreMoldova
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="nav-links">
+                        <a href="http://127.0.0.1:5000">home</a>
+                        <a href="/analyze">questions</a>
+                        <a href="/templates/maps.html">maps</a>
+                    </div>
+                </div>
+
+        <div class="maps-container">
+            <div class="maps-element">
+                <div class="map-heading">
+                    <h2>Places to visit in Moldova</h2>
+                    <br>
+                </div>
+
+                <div class="map-frame">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1BqYGCstv8x58SUtIAqlSCGUjSKjCe1Q&ehbc=2E312F" width="640" height="480"></iframe>
+                </div>
+            </div>
+
+
+    </div>
+    </div>
+
+    
+
+    {% block body %}{% endblock %}
+
+</body>
+</html>

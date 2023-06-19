@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+    <div class="questions container">
+         <div class="nav">
+
+                    <div class = "logo-content" >
+                        <img class="logo_img" src="{{ url_for('static', filename='img/Coat_of_arms_of_Moldova.svg.png')}}">
+                       <a href = "http://127.0.0.1:5000/" class = "logo-name">
+                            <span>
+                              ExploreMoldova
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="nav-links">
+                        <a href="http://127.0.0.1:5000">home</a>
+                        <a href="/analyze">questions</a>
+                        <a href="/templates/maps.html">maps</a>
+                    </div>
+                </div>
+
+
+    <div class="main-section__content">
+                    <div class="result" style="margin-top: 100px">
+                        <div class = "main-head__heading">
+                            <h1>Trebujeni</h1>
+                        </div>
+                        <div class="main-head__heading__description" style="margin-top: -5px">
+                            <span>Orheiul Vechi</span>
+                        </div>
+                        <div class="main-head__heading__description" style="font-size: 30px; text-decoration: underline; cursor: pointer;">
+                            <span>Read More</span>
+                        </div>
+                    </div>
+                    <div class="main-section__picture">
+                        <img class = "picture_gif"src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcR1jfPQmxIuxK6u5uGQRzaRjT2UevngyzrxavdO-5qzTmnyLN7tlr0WryEtvLrHpCAq" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    {% block body %}{% endblock %}
+</body>
+</html>
